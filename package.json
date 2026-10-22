@@ -1,0 +1,14 @@
+
+{
+  "name": "bookstore-nodejs",
+  "version": "1.0.0",
+  "description": "BookStore application demonstrating server-side validation with Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

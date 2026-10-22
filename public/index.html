@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore | Node.js Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <p class="eyebrow">NODE.JS PRACTICAL NO. 04</p>
+            <h1>BookStore</h1>
+            <p>Manage your books with server-side validation.</p>
+        </div>
+
+        <div class="server-badge">
+            <span class="dot"></span> Express Server
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Add a Book</h2>
+                    <p>Enter the book details below.</p>
+                </div>
+                <span class="tag">POST Request</span>
+            </div>
+
+            <form id="bookForm" novalidate>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="title">Book Title</label>
+                        <input id="title" name="title" type="text"
+                               placeholder="e.g. Atomic Habits">
+                        <small class="field-error" id="titleError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="author">Author</label>
+                        <input id="author" name="author" type="text"
+                               placeholder="e.g. James Clear">
+                        <small class="field-error" id="authorError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="genre">Genre</label>
+                        <input id="genre" name="genre" type="text"
+                               placeholder="e.g. Self-help">
+                        <small class="field-error" id="genreError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="year">Publication Year</label>
+                        <input id="year" name="year" type="text"
+                               placeholder="e.g. 2018">
+                        <small class="field-error" id="yearError"></small>
+                    </div>
+
+                    <div class="field full-width">
+                        <label for="pages">Number of Pages</label>
+                        <input id="pages" name="pages" type="text"
+                               placeholder="e.g. 320">
+                        <small class="field-error" id="pagesError"></small>
+                    </div>
+                </div>
+
+                <button class="primary-btn" type="submit">
+                    + Add Book
+                </button>
+            </form>
+
+            <div id="message" class="message" role="status"
+                 aria-live="polite" hidden></div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Your Library</h2>
+                    <p id="bookCount">Loading books...</p>
+                </div>
+                <span class="tag">GET Request</span>
+            </div>
+
+            <div id="bookList" class="book-list"></div>
+        </section>
+
+        <footer>
+            <p>Built with Node.js, Express.js, HTML, CSS and JavaScript.</p>
+        </footer>
+    </main>
+</body>
+</html>
